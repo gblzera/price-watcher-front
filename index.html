@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 256 256'%3E%3Cpath fill='%234f46e5' d='M244 128a12 12 0 0 1-12 12h-20v56a12 12 0 0 1-24 0v-88a12 12 0 0 1 12-12h40a12 12 0 0 1 0 24h-28v52h20a12 12 0 0 1 12 12Zm-88-80a12 12 0 0 0-12 12v104a12 12 0 0 0 24 0V60a12 12 0 0 0-12-12Zm-64 48a12 12 0 0 0-12 12v56H56a12 12 0 0 0 0 24h24a12 12 0 0 0 12-12v-64a12 12 0 0 0-12-12Z'/%3E%3C/svg%3E" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PriceWatcher</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <!-- CSS PARA CORRIGIR O AUTOFILL DO NAVEGADOR -->
+    <style>
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 30px white inset !important;
+            -webkit-text-fill-color: #1f2937 !important; /* Cor do texto para modo claro */
+        }
+
+        html.dark input:-webkit-autofill,
+        html.dark input:-webkit-autofill:hover,
+        html.dark input:-webkit-autofill:focus,
+        html.dark input:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 30px #374151 inset !important; /* Cor de fundo para modo escuro (gray-700) */
+            -webkit-text-fill-color: #f3f4f6 !important; /* Cor do texto para modo escuro */
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script> 
+</body>
+</html>
