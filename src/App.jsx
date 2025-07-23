@@ -3,7 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 
 // --- Configuração do Axios ---
-axios.defaults.baseURL = 'https://price-watcher-pf9z.onrender.com'; // Altere para o URL do seu backend
+axios.defaults.baseURL = import.meta.env.VITE_APU_URL || 'https://price-watcher-pf9z.onrender.com'; // Altere para o URL do seu backend
 const setAuthToken = (token) => {
     if (token) {
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
